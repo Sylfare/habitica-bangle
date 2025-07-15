@@ -1,0 +1,19 @@
+{
+  "name": "habitica-bangle",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "scripts": {
+    "send": "bun build index.ts --outfile=bundle.js && ./node_modules/espruino/bin/espruino-cli.js --board BANGLEJS2 -m --remote 72217d00-b996-4ed9-9326-59821fc53622 --no-ble bundle.js"
+  },
+  "dependencies": {
+    "@types/espruino": "^1.94.10",
+    "espruino": "^0.1.61"
+  }
+}
